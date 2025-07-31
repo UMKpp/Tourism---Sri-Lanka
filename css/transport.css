@@ -1,0 +1,487 @@
+        /* Main Content */
+        .main-content {
+            padding: 100px 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 120px;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 100;
+            text-align: center;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #d4af37;
+            margin-bottom: 80px;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* Quick Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 100px;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 100;
+            color: #d4af37;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+        }
+
+        /* Tab Navigation */
+        .tab-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 80px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            background: transparent;
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            padding: 15px 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+
+        .tab.active,
+        .tab:hover {
+            background: #d4af37;
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        padding: 40px;
+        margin-bottom: 80px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .filter-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        }
+
+        .filter-group {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        }
+
+        .filter-group label {
+        color: #d4af37;
+        font-weight: 300;
+        margin-bottom: 10px;
+        font-size: 1rem;
+        }
+
+        .form-control {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+        padding: 16px 20px;
+        border-radius: 12px;
+        font-size: 1rem;
+        font-weight: 400;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        }
+
+        .form-control::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        font-weight: 300;
+        }
+
+        .form-control:hover {
+        border-color: rgba(212, 175, 55, 0.4);
+        background: rgba(255, 255, 255, 0.12);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+        }
+
+        .form-control:focus {
+        outline: none;
+        border-color: #d4af37;
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 
+            0 0 0 3px rgba(212, 175, 55, 0.15),
+            0 8px 30px rgba(212, 175, 55, 0.2);
+        transform: translateY(-2px);
+        }
+
+        .form-control:focus + .form-control-highlight {
+        opacity: 1;
+        transform: scaleX(1);
+        }
+
+        /* Premium select styling */
+        .form-control select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23d4af37' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+        background-position: right 12px center;
+        background-repeat: no-repeat;
+        background-size: 16px;
+        padding-right: 48px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+        .filter-bar {
+            padding: 32px 24px;
+            border-radius: 16px;
+        }
+        
+        .filter-grid {
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+        
+        .form-control {
+            padding: 14px 16px;
+        }
+        }
+
+        /* Hotel Grid */
+        .hotel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .hotel-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .hotel-image {
+            height: 250px;
+            background: linear-gradient(45deg, #d4af37, #f4d03f);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: #000;
+            position: relative;
+        }
+
+        .hotel-rating {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #d4af37;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-weight: 300;
+            font-size: 0.9rem;
+        }
+
+        .hotel-content {
+            padding: 30px;
+        }
+
+        .hotel-name {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+
+        .hotel-location {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .hotel-price {
+            font-size: 2rem;
+            font-weight: 100;
+            color: #d4af37;
+            margin-bottom: 15px;
+        }
+
+        .hotel-price span {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 300;
+        }
+
+        .hotel-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .feature-tag {
+            background: rgba(212, 175, 55, 0.2);
+            color: #d4af37;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            font-weight: 300;
+        }
+
+        .book-btn {
+            width: 100%;
+            background: transparent;
+            border: 1px solid #d4af37;
+            color: #d4af37;
+            padding: 12px;
+            cursor: pointer;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .book-btn:hover {
+            background: #d4af37;
+            color: #000;
+            transform: translateY(-2px);
+        }
+
+        /* Transport Grid */
+        .transport-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .transport-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .transport-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(212, 175, 55, 0.3);
+        }
+
+        .transport-icon {
+            font-size: 3rem;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .transport-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+            font-weight: 400;
+        }
+
+        .transport-price {
+            font-size: 1.8rem;
+            font-weight: 100;
+            color: #d4af37;
+            margin-bottom: 20px;
+        }
+
+        .transport-features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .transport-features li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 20px;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 300;
+        }
+
+        .transport-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #d4af37;
+            font-weight: bold;
+        }
+
+        /* Booking Section */
+        .booking-section {
+            background: #111;
+            border-radius: 10px;
+            padding: 80px 5%;
+            margin-top: 100px;
+        }
+
+        .booking-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            color: #d4af37;
+            font-weight: 300;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            padding: 12px 16px;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 300;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #d4af37;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* CTA Button */
+        .cta-btn {
+            padding: 20px 40px;
+            border: 2px solid #d4af37;
+            color: #000;
+            background: #d4af37;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 300;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 40px;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.3);
+            background: transparent;
+            color: #d4af37;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .tab-container {
+                gap: 10px;
+            }
+            
+            .tab {
+                padding: 12px 20px;
+                font-size: 1rem;
+            }
+            
+            .filter-bar {
+                padding: 20px;
+            }
+            
+            .booking-section {
+                padding: 40px 20px;
+            }
+            
+            .hotel-grid,
+            .transport-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }

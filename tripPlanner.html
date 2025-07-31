@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Packages & Trip Planner - Sri Lanka</title>
+    <link rel="stylesheet" href="css/planner.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a class="logo" href="index.html"> TOUR SL </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="culture.html">Culture</a></li>
+                <li><a href="experience.html">Experiences</a></li>
+            </ul>
+            <button class="login-btn" onclick="window.open('login.html', '_blank')"> Login </button>
+
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="images/tripplannerback.jpg" alt="Sri Lanka Landscape">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">PLAN YOUR JOURNEY</h1>
+            <p class="hero-subtitle">CURATED EXPERIENCE THAT CAPTURE THE ESSENCE OF THE PEARL OF THE INDIAN OCEAN</p>
+        </div>
+    </section>
+
+    <!-- Why Sri Lanka Section -->
+        <section id="info" class="why-section">
+            <div class="why-container">
+                <h2 class="section-title">Why Sri Lanka</h2>
+                <p class="section-subtitle">A destination that captivates the soul</p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">🌦️</div>
+                        <h3 class="feature-title">Perfect Climate</h3>
+                        <p class="feature-description">December to March offers the ideal dry season, perfect for beaches and wildlife encounters.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">🏛️</div>
+                        <h3 class="feature-title">Rich Heritage</h3>
+                        <p class="feature-description">Ancient kingdoms, sacred temples, and colonial architecture tell stories spanning millennia.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">🐘</div>
+                        <h3 class="feature-title">Diverse Wildlife</h3>
+                        <p class="feature-description">From leopards to blue whales, experience one of Asia's most biodiverse destinations.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">✈️</div>
+                        <h3 class="feature-title">Easy Access</h3>
+                        <p class="feature-description">Simple ETA visa process and direct flights from major global destinations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+        <section class="cta-section">
+            <h2 class="section-title">Begin Your Ceylon Adventure</h2>
+            <p class="section-subtitle">Let us craft your perfect Sri Lankan experience</p>
+            <div class="cta-buttons">
+                <a href="#packages" class="cta-btn primary">Explore Packages</a>
+                <a href="#trip-builder" class="cta-btn primary">Custom Itinerary</a>
+            </div>
+        </section>
+
+        </section>
+
+
+
+        
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Featured Packages Section -->
+        <section id="packages" class="featured">
+            <h2 class="section-title">Signature Experiences</h2>
+            <p class="section-subtitle">Handcrafted journeys for the discerning traveler</p>
+            
+            <!-- Category Tabs -->
+            <div class="category-tabs">
+                <div class="tab active" onclick="filterPackages('all')">All</div>
+                <div class="tab" onclick="filterPackages('religious')">Religious</div>
+                <div class="tab" onclick="filterPackages('wildlife')">Wildlife</div>
+                <div class="tab" onclick="filterPackages('cultural')">Cultural</div>
+                <div class="tab" onclick="filterPackages('romantic')">Romantic</div>
+                <div class="tab" onclick="filterPackages('luxury')">Luxury</div>
+            </div>
+
+            <div class="destinations-grid">
+                <div class="destination-card" data-category="cultural" id="cultural">
+                    <div class="card-image-container">
+                        <img class="card-image" src="images/Cultural.jpg" alt="Sigiriya Rock Fortress, Sri Lanka" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <div class="package-duration">3 Days</div>
+                        <h3 class="card-title">Cultural Triangle</h3>
+                        <div class="package-price">299</div>
+                        <p class="card-description">Explore ancient kingdoms and climb Sigiriya Rock in this immersive cultural journey.</p>
+                        <button class="book-btn">Book Experience</button>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="religious" id="religious">
+                    <div class="card-image-container">
+                        <img class="card-image" src="images/CulturalTriangle.jpg" alt="Temple of the Sacred Tooth Relic, Kandy" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <div class="package-duration">6 Days</div>
+                        <h3 class="card-title">Sacred Pilgrimage</h3>
+                        <div class="package-price">349</div>
+                        <p class="card-description">Visit the Temple of the Sacred Tooth Relic, ancient monasteries, and holy sites in this spiritual journey through Sri Lanka's religious heritage.</p>
+                        <button class="book-btn">Book Experience</button>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="wildlife" id="wildlife">
+                    <div class="card-image-container">
+                        <img class="card-image" src="https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Sri Lankan Elephant in Yala National Park" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <div class="package-duration">5 Days</div>
+                        <h3 class="card-title">Safari Adventure</h3>
+                        <div class="package-price">599</div>
+                        <p class="card-description">Encounter leopards, elephants, and exotic birds across Yala and Udawalawe National Parks.</p>
+                        <button class="book-btn">Book Experience</button>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="adventure" id="adventure">
+                    <div class="card-image-container">
+                        <img class="card-image" src="images/elephantriding.webp" alt="Adventure activities in Sri Lanka - Elephant safari, surfing, whale watching" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <div class="package-duration">5 Days</div>
+                        <h3 class="card-title">Ultimate Adventure</h3>
+                        <div class="package-price">599</div>
+                        <p class="card-description">Experience thrilling elephant safaris, horseback riding, whale watching in Mirissa, world-class surfing, and soar through the skies with Flying Ravana zipline adventures.</p>
+                        <button class="book-btn">Book Experience</button>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="romantic" id="romantic">
+                    <div class="card-image-container">
+                        <img class="card-image" src="images/romanticescap.jpg" alt="Romantic sunset beach in Sri Lanka" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <div class="package-duration">7 Days</div>
+                        <h3 class="card-title">Romantic Escape</h3>
+                        <div class="package-price">899</div>
+                        <p class="card-description">Sunset cruises, private beach dinners, and luxury spa treatments for couples.</p>
+                        <button class="book-btn">Book Experience</button>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="luxury" id="luxury">
+                    <div class="card-image-container">
+                        <img class="card-image" src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Luxury resort in Sri Lanka with infinity pool" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <div class="package-duration">10 Days</div>
+                        <h3 class="card-title">Ultimate Ceylon</h3>
+                        <div class="package-price">1,999</div>
+                        <p class="card-description">The pinnacle of luxury travel with helicopter, private chefs, and exclusive experiences.</p>
+                        <button class="book-btn">Book Experience</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="trip-builder-section">
+        <div class="floating-elements">
+            <div class="floating-icon" style="left: 10%; animation-delay: 0s;">🏛️</div>
+            <div class="floating-icon" style="left: 20%; animation-delay: 3s;">🐘</div>
+            <div class="floating-icon" style="left: 80%; animation-delay: 7s;">🌅</div>
+            <div class="floating-icon" style="left: 70%; animation-delay: 12s;">🏖️</div>
+            <div class="floating-icon" style="left: 90%; animation-delay: 5s;">🚁</div>
+        </div>
+
+        <div class="trip-builder-container" id="trip-builder">
+            <div class="section-header">
+                <h2 class="section-title">Craft Your Journey</h2>
+                <p class="section-subtitle">Design a bespoke experience tailored to your desires with our intelligent trip builder</p>
+            </div>
+
+            <div class="journey-builder">
+                <!-- Destinations Panel -->
+                <div class="builder-panel">
+                    <div class="step-indicator">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Choose Destinations</h3>
+                    </div>
+                    
+                    <div class="destinations-selector">
+                        <div class="destinations-grid">
+                            <!-- Central -->
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="kandy">
+                                <span class="chip-emoji">🏛️</span>
+                                <div class="chip-name">Kandy</div>
+                            </div>
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="nuwaraeliya">
+                                <span class="chip-emoji">🌸</span>
+                                <div class="chip-name">Nuwara Eliya</div>
+                            </div>
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="ella">
+                                <span class="chip-emoji">🏔️</span>
+                                <div class="chip-name">Ella</div>
+                            </div>
+
+                            <!-- South -->
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="galle">
+                                <span class="chip-emoji">🏰</span>
+                                <div class="chip-name">Galle</div>
+                            </div>
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="mirissa">
+                                <span class="chip-emoji">🐋</span>
+                                <div class="chip-name">Mirissa</div>
+                            </div>
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="tangalle">
+                                <span class="chip-emoji">🏝️</span>
+                                <div class="chip-name">Tangalle</div>
+                            </div>
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="hikkaduwa">
+                                <span class="chip-emoji">🌊</span>
+                                <div class="chip-name">Hikkaduwa</div>
+                            </div>
+
+                            <!-- East -->
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="trincomalee">
+                                <span class="chip-emoji">⛩️</span>
+                                <div class="chip-name">Trincomalee</div>
+                            </div>
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="arugambay">
+                                <span class="chip-emoji">🏄</span>
+                                <div class="chip-name">Arugam Bay</div>
+                            </div>
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="batticaloa">
+                                <span class="chip-emoji">🎣</span>
+                                <div class="chip-name">Batticaloa</div>
+                            </div>
+
+                            <!-- North -->
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="jaffna">
+                                <span class="chip-emoji">🏯</span>
+                                <div class="chip-name">Jaffna</div>
+                            </div>
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="mannar">
+                                <span class="chip-emoji">🌳</span>
+                                <div class="chip-name">Mannar</div>
+                            </div>
+
+                            <!-- Cultural Triangle -->
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="sigiriya">
+                                <span class="chip-emoji">🗿</span>
+                                <div class="chip-name">Sigiriya</div>
+                            </div>
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="anuradhapura">
+                                <span class="chip-emoji">🛕</span>
+                                <div class="chip-name">Anuradhapura</div>
+                            </div>
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="polonnaruwa">
+                                <span class="chip-emoji">🏚️</span>
+                                <div class="chip-name">Polonnaruwa</div>
+                            </div>
+
+                            <!-- Western -->
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="colombo">
+                                <span class="chip-emoji">🏙️</span>
+                                <div class="chip-name">Colombo</div>
+                            </div>
+
+                            <!-- Wild/Nature -->
+                            <div class="destination-chip" onclick="toggleDestination(this)" data-destination="yala">
+                                <span class="chip-emoji">🐘</span>
+                                <div class="chip-name">Yala</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="duration-slider">
+                        <div class="preference-label">
+                            ⏱️ Trip Duration: <span id="duration-value">7 days</span>
+                        </div>
+                        <div class="slider-container">
+                            <input type="range" class="duration-range" min="3" max="21" value="7" 
+                                   oninput="updateDuration(this.value)" id="duration-slider">
+                            <div class="slider-labels">
+                                <span>3 days</span>
+                                <span>21 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Preferences Panel -->
+                <div class="builder-panel">
+                    <div class="step-indicator">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Your Preferences</h3>
+                    </div>
+
+                    <div class="preferences-section">
+                        <div class="preference-group">
+                            <div class="preference-label">💰 Budget Range</div>
+                            <div class="preference-options">
+                                <div class="option-tag" onclick="toggleOption(this)">Budget ($50-100/day)</div>
+                                <div class="option-tag" onclick="toggleOption(this)">Midrange ($100-250/day)</div>
+                                <div class="option-tag" onclick="toggleOption(this)">Luxury ($250+/day)</div>
+                            </div>
+                        </div>
+
+                        <div class="preference-group">
+                            <div class="preference-label">🎯 Travel Style</div>
+                            <div class="preference-options">
+                                <div class="option-tag" onclick="toggleOption(this)">Adventure</div>
+                                <div class="option-tag" onclick="toggleOption(this)">Relaxation</div>
+                                <div class="option-tag" onclick="toggleOption(this)">Cultural</div>
+                                <div class="option-tag" onclick="toggleOption(this)">Photography</div>
+                                <div class="option-tag" onclick="toggleOption(this)">Romantic</div>
+                            </div>
+                        </div>
+
+                        <div class="preference-group">
+                            <div class="preference-label">🌟 Activities</div>
+                            <div class="preference-options">
+                                <div class="option-tag" onclick="toggleOption(this)">Wildlife Safari</div>
+                                <div class="option-tag" onclick="toggleOption(this)">Cultural Sites</div>
+                                <div class="option-tag" onclick="toggleOption(this)">Beach Time</div>
+                                <div class="option-tag" onclick="toggleOption(this)">Mountain Hiking</div>
+                                <div class="option-tag" onclick="toggleOption(this)">Tea Tours</div>
+                                <div class="option-tag" onclick="toggleOption(this)">Water Sports</div>
+                            </div>
+                        </div>
+
+                        <div class="preference-group">
+                            <div class="preference-label">🏨 Accommodation</div>
+                            <div class="preference-options">
+                                <div class="option-tag" onclick="toggleOption(this)">Boutique Hotels</div>
+                                <div class="option-tag" onclick="toggleOption(this)">Beach Resorts</div>
+                                <div class="option-tag" onclick="toggleOption(this)">Heritage Hotels</div>
+                                <div class="option-tag" onclick="toggleOption(this)">Eco Lodges</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <button class="cta-btn" onclick="generateItinerary()">
+                    Generate My Perfect Journey
+                </button>
+            </div>
+        </div>
+    </section>
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <!-- Top Row: Destinations, Experiences, Support, Get in Touch -->
+                <div class="footer-top">
+                    <!-- Destinations -->
+                    <div class="footer-section">
+                        <h3>Destinations</h3>
+                        <ul class="footer-links">
+                            <li><a href="tripPlanner.html#romantic">Romantic Getaways</a></li>
+                            <li><a href="tripPlanner.html#adventure">Adventure Escapes</a></li>
+                            <li><a href="tripPlanner.html#wildlife">Wildlife Safaris</a></li>
+                            <li><a href="tripPlanner.html#cultural">Cultural Journeys</a></li>
+                            <li><a href="tripPlanner.html#religious">Religious Escapes</a></li>
+                            <li><a href="tripPlanner.html#luxury">Ultimate Ceylon</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Experiences -->
+                    <div class="footer-section">
+                        <h3>Experiences</h3>
+                        <ul class="footer-links">
+                            <li><a href="experience.html#culture">Cultural Immersion</a></li>
+                            <li><a href="experience.html#adventure">Luxury Accommodations</a></li>
+                            <li><a href="experience.html#wildlife">Private Tours</a></li>
+                            <li><a href="experience.html#culinary">Culinary Journeys</a></li>
+                            <li><a href="experience.html#adventure">Adventure Sports</a></li>
+                            <li><a href="experience.html#wellness">Wellness Retreats</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div class="footer-section">
+                        <h3>Support</h3>
+                        <ul class="footer-links">
+                            <li><a href="tripPlanner.html">Trip Planning</a></li>
+                            <li><a href="tripPlanner.html">Travel Insurance</a></li>
+                            <li><a href="#contactinfo">24/7 Concierge</a></li>
+                            <li><a href="#copyright">FAQ</a></li>
+                            <li><a href="#contact-info">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Get in Touch -->
+                    <div class="footer-section">
+                        <div class="contact-info">
+                            <h3>Get in Touch</h3>
+                            <p><span class="highlight">Phone:</span> +94 77 971 8104 / <br> +94 72 496 9007</p>
+                            <p><span class="highlight">Email:</span> tourSL@gmail.com</p>
+                            <p><span class="highlight">Address:</span> 222 Main Street, Nugegoda<br>Sri Lanka</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Row: Travel Insights and Social Icons -->
+                <div class="footer-newsletter">
+                    <div class="newsletter">
+                        <h3>Travel Insights</h3>
+                        <p>Subscribe to receive exclusive travel tips, destination guides, and special offers.</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                            <button type="submit" class="newsletter-btn">Subscribe</button>
+                        </form>
+                    </div>
+
+                    <div class="social-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Facebook">f</a>
+                            <a href="#" class="social-icon" aria-label="Instagram">@</a>
+                            <a href="#" class="social-icon" aria-label="Twitter">t</a>
+                            <a href="#" class="social-icon" aria-label="LinkedIn">in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright" id="copyright">© 2025 TOUR SL. All rights reserved.</p>
+                    <ul class="footer-legal">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Filter packages by category
+        function filterPackages(category) {
+            const cards = document.querySelectorAll('.destination-card');
+            const tabs = document.querySelectorAll('.tab');
+            
+            // Update active tab
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Show/hide cards with animation
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.transition = 'all 0.5s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 100);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(-20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Generate itinerary
+        function generateItinerary() {
+            alert('Your custom itinerary is being generated! You will receive it via email within 24 hours.');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observerr = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for animation
+        document.querySelectorAll('.destination-card, .feature-item, .builder-section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observerr.observe(el);
+        });
+
+
+        // Track selected options
+        let selectedDestinations = [];
+        let selectedPreferences = {
+            budget: null,
+            style: [],
+            activities: [],
+            accommodation: []
+        };
+
+        function toggleDestination(element) {
+            const destination = element.dataset.destination;
+            
+            if (element.classList.contains('selected')) {
+                element.classList.remove('selected');
+                selectedDestinations = selectedDestinations.filter(d => d !== destination);
+            } else {
+                element.classList.add('selected');
+                selectedDestinations.push(destination);
+            }
+            
+            // Add subtle animation
+            element.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                element.style.transform = '';
+            }, 150);
+        }
+
+        function toggleOption(element) {
+            const group = element.closest('.preference-group');
+            const isMultiSelect = !group.querySelector('.preference-label').textContent.includes('Budget');
+            
+            if (!isMultiSelect) {
+                // Single select for budget
+                group.querySelectorAll('.option-tag').forEach(tag => tag.classList.remove('selected'));
+            }
+            
+            element.classList.toggle('selected');
+            
+            // Add ripple effect
+            const ripple = document.createElement('div');
+            ripple.style.cssText = `
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(212, 175, 55, 0.4);
+                transform: scale(0);
+                animation: ripple 0.6s linear;
+                left: 50%;
+                top: 50%;
+                pointer-events: none;
+            `;
+            
+            element.style.position = 'relative';
+            element.appendChild(ripple);
+            
+            setTimeout(() => ripple.remove(), 600);
+        }
+
+        function updateDuration(value) {
+            document.getElementById('duration-value').textContent = `${value} day${value > 1 ? 's' : ''}`;
+        }
+
+        function generateItinerary() {
+            const button = document.querySelector('.generate-btn');
+            const section = document.querySelector('.trip-builder-section');
+            
+            // Add loading state
+            section.classList.add('loading');
+            button.innerHTML = '🔮 Crafting Your Adventure...';
+            
+            // Simulate API call
+            setTimeout(() => {
+                section.classList.remove('loading');
+                button.innerHTML = '✨ Generate My Perfect Journey';
+                
+                // Show success message with collected data
+                const summary = {
+                    destinations: selectedDestinations,
+                    duration: document.getElementById('duration-slider').value,
+                    selectedOptions: document.querySelectorAll('.option-tag.selected').length
+                };
+                
+                alert(`🎉 Your custom itinerary is being created!\n\n` +
+                      `📍 Destinations: ${selectedDestinations.length > 0 ? selectedDestinations.join(', ') : 'None selected'}\n` +
+                      `⏱️ Duration: ${summary.duration} days\n` +
+                      `⚙️ Preferences: ${summary.selectedOptions} selected\n\n` +
+                      `You'll receive your personalized Sri Lankan adventure plan within 24 hours!`);
+            }, 3000);
+        }
+
+        // Add CSS for ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Add entrance animations
+        window.addEventListener('load', () => {
+            const panels = document.querySelectorAll('.builder-panel');
+            panels.forEach((panel, index) => {
+                panel.style.opacity = '0';
+                panel.style.transform = 'translateY(50px)';
+                panel.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                
+                setTimeout(() => {
+                    panel.style.opacity = '1';
+                    panel.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+
+        // Smooth scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.destination-chip, .preference-group').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
